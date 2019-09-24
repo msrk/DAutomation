@@ -1,0 +1,43 @@
+[
+
+  {
+    "name":"result",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/resultTextView"
+  },
+  {
+    "name":"leftinput",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/inputFieldLeft"
+  },
+  {
+    "name":"rightinput",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/inputFieldRight"
+  },
+  {
+    "name":"add",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/additionButton"
+  },
+  {
+    "name":"subtract",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/subtractButton"
+  },
+  {
+    "name":"multiply",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/multiplicationButton"
+  },
+  {
+    "name":"reset",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/resetButton"
+  },
+  {
+    "name":"devide",
+    "type":"Id",
+    "value":"com.vbanthia.androidsampleapp:id/divisionButton"
+  }
+]

@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestAll">
+
+    <test name="ExperimentTests">
+        <classes>
+
+            <class name="test.ddot.com.AddNumbersTest"/>
+            <class name="test.ddot.com.SubtractNumbersTest" />
+            <class name="test.ddot.com.MultiplyNumbersTest"/>
+            <class name="test.ddot.com.DevideNumbersTest"/>
+            <class name="test.ddot.com.ResetAfterOperationTest"/>
+
+        </classes>
+    </test>
+
+
+</suite>
