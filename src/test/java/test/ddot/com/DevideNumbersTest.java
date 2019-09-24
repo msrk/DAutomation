@@ -35,7 +35,7 @@ public class DevideNumbersTest extends BaseTest{
 
             String result=cal.operation(columns.get("left"),columns.get("right"),"Devide");
             DecimalFormat df = new DecimalFormat("######0.00");
-            String comp = df.format(Float.valueOf(columns.get("left"))/Float.valueOf(columns.get("left")));
+            String comp = df.format(Float.valueOf(columns.get("left"))/Float.valueOf(columns.get("right")));
             Assert.assertEquals(columns.get("left")+" / "+columns.get("right")+" = "+comp, result);
             driver.closeApp();
             int g=0;
