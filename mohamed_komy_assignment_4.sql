@@ -2,22 +2,61 @@
 PRAGMA foreign_keys = ON;
 Drop table if exists orders;
 DROP TABLE IF EXISTS customer;
-Create table if not exists customer(
-    id integer PRIMARY KEY AUTOINCREMENT,
+
+Create Table if not exists customer (
+    id integer primary key AUTOINCREMENT,
     name text,
-    address text,
-    phone_number text,
-    join_date text
+    email text,
+    street_address text,
+    city text,
+    province text,
+    postal_code text,
+    -- order_date text,
+    -- customer_id number,
+    -- FOREIGN KEY (customer_id)  REFERENCES customer(id) on DELETE CASCADE on UPDATE CASCADE
 
 );
-Create Table if not exists orders (
+
+Create Table if not exists product (
     id integer primary key AUTOINCREMENT,
-    amount number,
-    total_cost real,
+    name text,
+    description text,
+    price real,
+    quantity_in_stock number,
+    --province text,
+    --postal_code text,
+    -- order_date text,
+    -- customer_id number,
+    -- FOREIGN KEY (customer_id)  REFERENCES customer(id) on DELETE CASCADE on UPDATE CASCADE
+
+);
+
+--Create table if not exists customer(
+--    id integer PRIMARY KEY AUTOINCREMENT,
+--    name text,
+--    address text,
+--    phone_number text,
+--    join_date text
+
+--);
+Create Table if not exists orders_header (
+    id integer primary key AUTOINCREMENT,
     order_date text,
+    total_price real,
     customer_id number,
     FOREIGN KEY (customer_id)  REFERENCES customer(id) on DELETE CASCADE on UPDATE CASCADE
 
+);
+
+
+Create Table if not exists orders_detail (
+    id integer primary key AUTOINCREMENT,
+    order_qty number,
+    sub_total real,
+    product_id number,
+    order_header_id,
+    FOREIGN KEY (product_id)  REFERENCES product(id) on DELETE CASCADE on UPDATE CASCADE,
+FOREIGN KEY (order_header_id)  REFERENCES orders_header(id) on DELETE CASCADE on UPDATE CASCADE
 );
 
 
